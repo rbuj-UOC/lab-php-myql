@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="ca">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ALTA D'ESTUDIANTS</title>
+</head>
+
+<body>
+    <p>Introdueix les dades per donar d'alta un estudiant a la base de dades</p>
+    <form action="A_estudiants.php" method="post">
+        <p>DNI: <input type="text" name="DNI" minlength="1" maxlength="9" pattern="[a-zA-Z0-9]+" required/></p>
+        <p>Nom: <input type="text" name="nom" minlength="3" maxlength="100" pattern="[a-zA-Z'\-\s]+" title="Text de 3 a 100 caràcters, incloent l'apostrof i el guió" required/></p>
+        <p>Edat: <input type="number" name="edat" min="1" max="99" required/></p>
+        <p><input type="submit" value="Donar d'alta" /></p>
+    </form>
+</body>
+
+</html>

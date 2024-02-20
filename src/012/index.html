@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="ca">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>EXEMPLE FORMULARI post</title>
+  <style>
+    body {
+      background-color: bisque;
+    }
+
+    fieldset {
+      margin: 8px 0;
+      width: fit-content;
+    }
+
+    label {
+      display: block;
+    }
+
+    #threecols div {
+      display: inline-block;
+    }
+
+    input[type=password],
+    input[type=text],
+    select,
+    textarea {
+      margin: 8px 0;
+      padding: 8px;
+    }
+
+    #container {
+      margin-left: auto;
+      margin-right: auto;
+      width: fit-content;
+    }
+  </style>
+</head>
+
+<body>
+  <div id="container">
+    <h1>Introdueix les dades</h1>
+    <form action="fitxer_post.php" method="post">
+      <fieldset>
+        <legend>Dades personals</legend>
+        <div id="threecols">
+          <div>
+            <label for="userID">DNI:</label>
+            <input type="text" name="DNI" id="userID" size="9" maxlength="9" pattern="[a-zA-Z0-9]+">
+          </div>
+          <div>
+            <label for="userName">Nom:</label>
+            <input type="text" name="nom" id="userName" size="50" maxlength="50">
+          </div>
+          <div>
+            <label for="userPassword">Paraula de pas:</label>
+            <input type="password" name="password" id="userPassword" size="12" maxlength="12">
+          </div>
+        </div>
+        <div>
+          <label for="userComment">Comentaris:</label>
+          <textarea rows="4" cols="50" name="comentaris" id="userComment">Aquest control "textarea" pot tenir una quantitat de contingut textual</textarea>
+        </div>
+      </fieldset>
+      <fieldset>
+        <legend>Dades acadèmiques</legend>
+        <div>
+          <label for="listbox1">Assignatures:</label>
+          <select name="assignatures[]" id="listbox1" multiple="multiple" size="9">
+            <option value="" selected="selected">-Selecciona assignatura-</option>
+            <optgroup label="Programació">
+              <option value="Programació WEB">Programació WEB</option>
+              <option value="Programació Android">Programació Android</option>
+              <option value="Programació C++">Programació C++</option>
+            </optgroup>
+            <optgroup label="Disseny">
+              <option value="Disseny de bases de dades">Disseny de bases de dades</option>
+              <option value="Disseny d'interfícies d'usuari">Disseny d'interfícies d'usuari</option>
+            </optgroup>
+            <option value="Càlcul matemàtic" disabled="disabled">Càlcul matemàtic</option>
+          </select>
+        </div>
+      </fieldset>
+      <input type="submit" value="Enviar dades">
+    </form>
+  </div>
+</body>
+
+</html>

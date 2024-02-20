@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ca">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>EXEMPLE FORMULARI post</title>
+</head>
+
+<body>
+  <p>Introdueix les dades</p>
+  <form action="fitxer_post.php" method="post">
+    <div>
+      <label for="userID">DNI:</label>
+      <input type="text" name="DNI" id="userID" required>
+    </div>
+    <div>
+      <label for="userName">Nom:</label>
+      <input type="text" name="nom" id="userName" required>
+    </div>
+    <div>
+      <label for="userPassword">Paraula de pas:</label>
+      <input type="password" name="password" id="userPassword" required>
+    </div>
+    <div>
+      <label for="userComment">Comentaris:</label>
+      <textarea rows="4" cols="50" name="comentaris" id="userComment">Aquest control "textarea" pot tenir una quantitat de contingut textual</textarea>
+    </div>
+    <input type="submit" value="Enviar dades">
+  </form>
+</body>
+
+</html>
