@@ -15,3 +15,7 @@ Per iniciar la depuració del fitxer `index.php` amb VS Code:
    3. Obrir el fitxer `index.php` i afegir algun breakpoint
    4. Iniciar la depuració: `Run and Debug`, `Listen for Xdebug`
 3. Obrir [http://localhost:8080](http://localhost:8080) al navegador web preferit
+
+## phpMyAdmin
+
+Obrir [http://localhost:8090](http://localhost:8090) al navegador web preferit
