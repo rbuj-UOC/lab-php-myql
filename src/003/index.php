@@ -4,8 +4,8 @@ header("Content-Type: text/html;charset=utf-8");
 
 //paràmetres de connexió
 $host     = getenv("MYSQL_HOSTNAME");
-$user     = "root";
-$password = getenv("MYSQL_ROOT_PASSWORD");
+$user     = getenv("MYSQL_USER");
+$password = getenv("MYSQL_PASSWORD");
 $dbname   = "estudis";
 
 //realització de la connexió

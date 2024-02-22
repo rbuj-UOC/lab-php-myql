@@ -13,8 +13,8 @@ class TControlAcad
     function __construct()
     {
         $this->servidor = getenv("MYSQL_HOSTNAME");
-        $this->usuari = "root";
-        $this->paraula_pas = getenv("MYSQL_ROOT_PASSWORD");
+        $this->usuari = getenv("MYSQL_USER");
+        $this->paraula_pas = getenv("MYSQL_PASSWORD");
         $this->nom_bd = "bdprova";
     }
     public function alta_estudiant($DNI, $nom, $edat)
