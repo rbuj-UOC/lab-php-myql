@@ -34,16 +34,3 @@ services:
     volumes:
       - ./estudis.sql:/docker-entrypoint-initdb.d/estudis.sql
       - ./db_data:/var/lib/mysql
-
-  # phpmyadmin:
-  #   depends_on:
-  #     - db
-  #   image: phpmyadmin
-  #   env_file: .env
-  #   environment:
-  #     PMA_HOST: $MYSQL_HOSTNAME
-  #     PMA_USER: root
-  #     PMA_PASSWORD: $MYSQL_ROOT_PASSWORD
-  #   ports:
-  #     - 8090:80
-  #   restart: always
